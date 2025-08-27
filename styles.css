@@ -1,0 +1,22 @@
+:root { --size: 15; --cell: 32px; --gap: 2px; }
+* { box-sizing: border-box; }
+body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"; background: #0f172a; color: #e2e8f0; margin: 0; display: grid; place-items: center; min-height: 100vh; }
+.wrapper { width: min(95vw, 800px); }
+header { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin: 16px 0 12px; }
+h1 { font-size: 20px; margin: 0; color: #f8fafc; }
+.controls { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+button, select { background: #1f2937; color: #e5e7eb; border: 1px solid #334155; padding: 8px 12px; border-radius: 8px; cursor: pointer; }
+button:hover { background: #273449; }
+.status { margin: 8px 0 16px; padding: 10px 12px; background: #111827; border: 1px solid #334155; border-radius: 8px; color: #e5e7eb; }
+.board { display: grid; grid-template-columns: repeat(var(--size), var(--cell)); grid-auto-rows: var(--cell); gap: var(--gap); background: #111827; padding: 8px; border-radius: 10px; border: 1px solid #334155; overflow: auto; }
+.cell { display: grid; place-items: center; width: var(--cell); height: var(--cell); background: #0b1220; border: 1px solid #1f2937; color: #e5e7eb; font-weight: 700; font-size: 18px; user-select: none; border-radius: 6px; transition: background .12s ease; }
+.cell:hover { background: #0e1627; }
+.cell.X { color: #22d3ee; text-shadow: 0 0 8px rgba(34,211,238,.3); }
+.cell.O { color: #f472b6; text-shadow: 0 0 8px rgba(244,114,182,.3); }
+.cell.win { background: #14532d !important; border-color: #16a34a; }
+footer { margin: 14px 0; color: #94a3b8; font-size: 12px; text-align: right; }
+.legend { display: flex; gap: 10px; align-items: center; }
+.dot { width: 12px; height: 12px; border-radius: 50%; display: inline-block; }
+.x-dot { background: #22d3ee; }
+.o-dot { background: #f472b6; }
+

@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Caro (Gomoku)</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Caro (Gomoku)</h1>
+        <div class="controls">
+          <label for="size">Kích thước:</label>
+          <select id="size">
+            <option value="10">10 x 10</option>
+            <option value="12">12 x 12</option>
+            <option value="15" selected>15 x 15</option>
+            <option value="19">19 x 19</option>
+          </select>
+          <button id="reset">Chơi lại</button>
+        </div>
+      </header>
+
+      <div class="status" id="status">Lượt: X</div>
+      <div class="board" id="board"></div>
+      <footer>
+        <span class="legend">
+          <span class="dot x-dot"></span> X
+          <span class="dot o-dot"></span> O
+          <span>Luật: 5 quân liên tiếp theo hàng/ngang/chéo sẽ thắng.</span>
+        </span>
+      </footer>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+ </html>
+
+
